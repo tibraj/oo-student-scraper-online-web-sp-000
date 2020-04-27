@@ -28,7 +28,8 @@ class Scraper
         student[:linkedin] = link
       elsif link.include?("github")
         student[:github] = link
-      else student[:blog] = link
+      else
+        student[:blog] = link
       end
     end
     student[:profile_quote] = page.css("profile-quote").text
